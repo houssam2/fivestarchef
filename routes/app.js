@@ -1,12 +1,16 @@
 
 const express       = require("express"),   
-bodyParser    = require("body-parser"),
-path          = require("path"),
-app           = express();
+      bodyParser    = require("body-parser"),
+      path          = require("path"),
+      app           = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
-console.log(app.use(express.static(path.join(__dirname, 'css'))));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.get("/blogs/new", (req, res) => {
-res.render("new");
+app.get("/", (req, res) => {
+    res.render("../views/home.ejs");
 });
+
+app.listen(3000, () => {
+    console.log("Up on port 3000");
+})
