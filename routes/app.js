@@ -15,7 +15,7 @@ app.get("/reserve", (req, res) => {
     res.render("../views/reserve.ejs");
 });
 
-app.get("/tables", (req, res) => {
+app.get("/table", (req, res) => {
     res.render("../views/tables.ejs");
 });
 
