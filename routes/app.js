@@ -22,6 +22,14 @@ app.get("/table", (req, res) => {
 });
 
 
+app.get("/api/table", (req, res) => {
+    data.readTables();
+    data.readWaitList();
+    
+    res.send(data.tables.arr.concat(data.waitList.arr));
+});
+
+
 app.post("/api/reserve", function(req,res) {
     var newTable = req.body;
     newTable.tableId = getTableID();
