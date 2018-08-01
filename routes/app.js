@@ -6,17 +6,18 @@ const express       = require("express"),
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    res.render("../views/home.ejs");
+    res.render("../views/home");
 });
 
 app.get("/reserve", (req, res) => {
-    res.render("../views/reserve.ejs");
+    res.render("../views/reserve");
 });
 
 app.get("/table", (req, res) => {
-    res.render("../views/tables.ejs");
+    res.render("../views/tables");
 });
 
 app.listen(3000, () => {
