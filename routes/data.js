@@ -12,6 +12,7 @@ var waitList = {
 };
 
 function Person(custName, custPhone, custEmail, custId) {
+    this.tableId = tableI;
     this.custName = custName;
     this.custPhone = custPhone;
     this.custEmail = custEmail;
