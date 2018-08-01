@@ -21,6 +21,28 @@ app.get("/table", (req, res) => {
     res.render("../views/tables");
 });
 
+
+app.post("/api/reserve", function(req,res) {
+    var newTable = req.body;
+    newTable.tableId = getTableID();
+    ressies.push(newTable);
+    res.json(ressies);
+ })
+ 
+ // table
+ function getTableID() {
+    if (ressies.length <= 4  ) {
+        var currTables = ressies.length + 1
+        return currTables
+        
+    } else {
+        return -1;
+    }
+ }
+ 
+ var ressies = [];
+
+
 app.listen(3000, () => {
     console.log("Up on port 3000");
 })
