@@ -1,8 +1,8 @@
 // Functions to write/read json files
 var fs = require("fs");
 
-const tablesFile = "../resources/tables.json";
-const waitListFile = "../resources/waitList.json";
+const tablesFile = "./resources/tables.json";
+const waitListFile = "./resources/waitList.json";
 
 var tables = {
     arr: []

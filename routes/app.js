@@ -2,7 +2,7 @@
 const express       = require("express"),   
       bodyParser    = require("body-parser"),
       path          = require("path"),
-      data          = require("data"),
+      data          = require("./data.js"),
       app           = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
